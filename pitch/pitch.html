@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Handoff — 3 min</title>
+<style>
+  @page { size: 100mm 178mm; margin: 7mm 6mm; }
+
+  :root {
+    --bg:#0b0b0d; --fg:#f2f2f4; --dim:#8b8b95;
+    --accent:#34d399; --warn:#fbbf24; --danger:#f87171;
+    --line:#26262c;
+  }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,'SF Pro Text',Helvetica,Arial,sans-serif;
+    font-size:11.5pt; line-height:1.42; -webkit-font-smoothing:antialiased; }
+
+  section { page-break-inside:avoid; break-inside:avoid; margin-bottom:9mm;
+            padding-left:1.2mm; }
+  .newpage { page-break-before:always; break-before:page; }
+
+  h1 { font-size:20pt; margin:0 0 1mm; letter-spacing:-0.4pt; }
+  h2 { font-size:9pt; text-transform:uppercase; letter-spacing:1.4pt;
+       color:var(--dim); margin:0 0 2.5mm; font-weight:600;
+       border-bottom:1px solid var(--line);
+       /* left pad: letter-spacing clips the first glyph at the page edge */
+       padding:0 0 1.5mm 0.8mm; }
+  h3 { font-size:11.5pt; margin:4mm 0 1.5mm; color:var(--accent); }
+
+  .t { display:inline-block; font-variant-numeric:tabular-nums;
+       background:var(--accent); color:#04170f; font-weight:700;
+       padding:0.5mm 2mm; border-radius:2mm; font-size:9.5pt; margin-right:2mm; }
+
+  .say { font-size:12.5pt; font-weight:600; line-height:1.34; margin:2mm 0; }
+  .say::before { content:"“"; color:var(--dim); }
+  .say::after  { content:"”"; color:var(--dim); }
+
+  .do { color:var(--warn); font-size:10.5pt; margin:1.5mm 0; }
+  .do::before { content:"▸ "; }
+
+  ul { margin:1.5mm 0; padding-left:5mm; }
+  li { margin:1mm 0; }
+  .dim { color:var(--dim); }
+  .sm { font-size:10pt; }
+
+  .kill { border-left:3px solid var(--accent); padding:2mm 0 2mm 3mm;
+          background:#0f1a15; margin:3mm 0; font-size:12.5pt; font-weight:600; }
+
+  .q { font-weight:700; color:var(--warn); margin:3.5mm 0 1mm; font-size:11pt; }
+  .a { margin:0 0 1mm; font-size:10.5pt; }
+  .a::before { content:"→ "; color:var(--accent); }
+
+  .panic { border:1px solid var(--danger); border-radius:2mm; padding:3mm; }
+  .panic .q { color:var(--danger); }
+
+  .grid { display:grid; grid-template-columns:auto 1fr; gap:1mm 3mm;
+          font-size:10.5pt; align-items:baseline; }
+  .grid b { color:var(--accent); font-variant-numeric:tabular-nums; }
+</style>
+</head>
+<body>
+
+<!-- ─────────────────────────────── AT A GLANCE ─────────────────────────── -->
+<section>
+  <h1>Handoff</h1>
+  <div class="dim sm">When an AI gets stuck, it hires a human for 15 seconds.</div>
+
+  <h2 style="margin-top:5mm">Shape of the 3 minutes</h2>
+  <div class="grid">
+    <b>0:00</b><span>Hook — the failure everyone has</span>
+    <b>0:25</b><span>DEMO (the whole middle)</span>
+    <b>1:40</b><span>Why it's only possible here</span>
+    <b>2:05</b><span>Who buys it</span>
+    <b>2:35</b><span>Close + ask</span>
+  </div>
+
+  <div class="kill">The first one it couldn&rsquo;t know.<br>The second one it shouldn&rsquo;t decide.</div>
+  <div class="sm dim">That's the whole pitch. If you only land one thing, land that.</div>
+</section>
+
+<!-- ─────────────────────────────── HOOK ────────────────────────────────── -->
+<section class="newpage">
+  <h2><span class="t">0:00</span> Hook</h2>
+
+  <div class="say">Everyone here is shipping agents. They all break the same way — the agent hits one thing it can&rsquo;t resolve, and stops.</div>
+  <div class="say">It waits for a human who isn&rsquo;t watching. The work just dies there.</div>
+
+  <p class="sm dim">Then straight into the demo. No preamble, no roadmap slide, no "let me tell you about web3."</p>
+</section>
+
+<!-- ─────────────────────────────── DEMO ────────────────────────────────── -->
+<section class="newpage">
+  <h2><span class="t">0:25</span> Demo — part 1</h2>
+
+  <div class="do">Point at the QR on screen.</div>
+  <div class="say">Scan that. You&rsquo;re now the labor pool.</div>
+
+  <div class="do">Hit run. Agent starts clearing invoices.</div>
+  <div class="say">This is an accounts-payable agent. Eight invoices, real policy, real checks.</div>
+
+  <h3>STOP 1 &mdash; it can't know</h3>
+  <div class="do">Agent halts on ACME. Phones buzz.</div>
+  <div class="say">Vendor name doesn&rsquo;t match our approved list, and the bank account changed. Rebrand, or someone impersonating a supplier?</div>
+  <div class="say">That fact isn&rsquo;t in any system. It&rsquo;s in a person&rsquo;s head.</div>
+
+  <div class="do">Race resolves. Someone wins, answers, gets 40&cent;.</div>
+  <div class="say">Forty cents, settled, to a stranger who joined ten seconds ago.</div>
+</section>
+
+<section>
+  <h2><span class="t">1:05</span> Demo — part 2</h2>
+
+  <div class="do">Agent resumes. Two more clear.</div>
+
+  <h3>STOP 2 &mdash; it shouldn't decide</h3>
+  <div class="say">Eighteen percent over the purchase order. Policy caps at ten. The overage is expedited freight the customer asked for.</div>
+  <div class="say">A smarter model doesn&rsquo;t fix this. It&rsquo;s a judgment call with money on both sides — and it isn&rsquo;t the agent&rsquo;s to make.</div>
+
+  <div class="do">Different person wins it. (Routing deprioritizes whoever was just paid.)</div>
+
+  <div class="kill">The first one it couldn&rsquo;t know. The second one it shouldn&rsquo;t decide. Neither gets solved by a better model.</div>
+</section>
+
+<!-- ─────────────────────────────── WHY HERE ────────────────────────────── -->
+<section class="newpage">
+  <h2><span class="t">1:40</span> Why this couldn't exist before</h2>
+
+  <div class="say">That job paid forty cents. On card rails, moving forty cents costs about thirty cents plus a percentage.</div>
+  <div class="say">The business doesn&rsquo;t fail because nobody thought of it. It fails on arithmetic.</div>
+
+  <ul class="sm">
+    <li>Sub-cent fees + sub-second settlement &rarr; a 40&cent; job clears a profit</li>
+    <li><b>QuickNode</b> — every send and every confirmation; we rebroadcast until it lands</li>
+    <li class="dim">200 payouts that all have to land is a delivery problem, not a UI problem</li>
+  </ul>
+
+  <p class="sm dim">Say "blockchain" at most once. Nobody is buying the chain.</p>
+</section>
+
+<!-- ─────────────────────────────── GTM ─────────────────────────────────── -->
+<section>
+  <h2><span class="t">2:05</span> Who buys it</h2>
+
+  <div class="say">Agent platforms and frameworks. They hit this wall constantly and can&rsquo;t solve it themselves — because the blocker was never the labor, it was the payment.</div>
+
+  <ul class="sm">
+    <li>They install an SDK; every agent gains a human fallback</li>
+    <li>The frameworks bring the demand — we don&rsquo;t chase end users</li>
+    <li>Supply already exists: annotation and gig pools, paid badly and slowly</li>
+    <li><b>Revenue:</b> take rate on task volume</li>
+  </ul>
+</section>
+
+<!-- ─────────────────────────────── CLOSE ───────────────────────────────── -->
+<section>
+  <h2><span class="t">2:35</span> Close</h2>
+
+  <div class="say">Every agent you deploy this year will get stuck. Right now that means it stops. We make it ask.</div>
+  <div class="do">Gesture at the room.</div>
+  <div class="say">Everyone here just got paid by an AI. That&rsquo;s the product.</div>
+
+  <p class="sm"><b>Ask:</b> intros to agent platforms, and a pilot.</p>
+</section>
+
+<!-- ─────────────────────────────── REBUTTALS ───────────────────────────── -->
+<section class="newpage">
+  <h2>Rebuttals — most likely first</h2>
+
+  <div class="q">Isn't this Mechanical Turk?</div>
+  <div class="a">MTurk is batch: minimums, days-long payouts, human-initiated. Nothing does real-time, agent-initiated, sub-dollar hiring. Payment was the blocker, not labor.</div>
+
+  <div class="q">Why not a virtual card or Stripe?</div>
+  <div class="a">Thirty-cent floor. A forty-cent job can't exist on those rails at any volume.</div>
+
+  <div class="q">Is the demo scripted?</div>
+  <div class="a">The prompt states the policy and when to escalate — never the two cases. The model finds them. Hand me a ninth invoice and I'll add it live.</div>
+
+  <div class="q">Won't better models eliminate this?</div>
+  <div class="a">That's what the two stops are for. One is missing information, one is missing authority. Neither is an intelligence problem.</div>
+
+  <div class="q">Fifteen seconds is slow for an agent.</div>
+  <div class="a">It's the fallback path, not the hot path. The alternative isn't "faster" — it's the task failing and waiting hours for you.</div>
+</section>
+
+<section>
+  <h2>Rebuttals — cont.</h2>
+
+  <div class="q">Quality? These are strangers.</div>
+  <div class="a">Redundancy and consensus for high-stakes tasks, reputation scoring over time. Tonight is one worker because we have three minutes.</div>
+
+  <div class="q">Where does supply come from at scale?</div>
+  <div class="a">It already exists — annotation and gig platforms. We're a better payout rail for the same people.</div>
+
+  <div class="q">Isn't this a webhook and a payment?</div>
+  <div class="a">The product is routing, the claim race, eligibility, and settlement. The invention is a tool call that blocks until a human answers.</div>
+
+  <div class="q">Why is it on devnet?</div>
+  <div class="a">One constant. Mainnet is a mint address — the economics are identical. Don't apologize, don't dwell.</div>
+
+  <div class="q">What if nobody answers?</div>
+  <div class="a">Dispatch widens at six seconds, escalates at twelve, and the agent degrades to holding the invoice. You'll see it if the room is shy — it's built in.</div>
+
+  <div class="q">How big is this really?</div>
+  <div class="a">Bounded by one rule: answerable in fifteen seconds by someone with no context. That's the shape of the market, and it's every agent deployment.</div>
+</section>
+
+<!-- ─────────────────────────────── PANIC ───────────────────────────────── -->
+<section class="newpage">
+  <h2>If something breaks</h2>
+
+  <div class="panic">
+    <div class="q">Wifi dies</div>
+    <div class="a">Backup video. Keep talking over it — don't narrate the failure.</div>
+
+    <div class="q">Nobody claims</div>
+    <div class="a">"Watch — it expands the shortlist automatically." It's a feature. Let it run.</div>
+
+    <div class="q">Payment stuck pending</div>
+    <div class="a">"Sent, confirming — here's the signature." Still true. Move on.</div>
+
+    <div class="q">Agent doesn't stop</div>
+    <div class="a">Force-stop on /control. Don't explain it.</div>
+  </div>
+
+  <h3>Don't</h3>
+  <ul class="sm">
+    <li>Don't explain the architecture</li>
+    <li>Don't read the invoice list aloud</li>
+    <li>Don't apologize for devnet</li>
+    <li>Don't say "blockchain" twice</li>
+    <li>Don't fill silence during the race — let them watch</li>
+  </ul>
+</section>
+
+</body>
+</html>
